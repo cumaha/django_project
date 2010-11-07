@@ -5,6 +5,7 @@ from path import path
 
 
 PROJECT_ROOT = path(__file__).abspath().dirname()
+PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
 
 DEBUG = True
