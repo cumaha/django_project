@@ -6,3 +6,6 @@
 
 # SQLite3 DB files:
 *.db
+
+# Python virtual environments:
+env
