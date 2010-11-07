@@ -1,0 +1,8 @@
+# Temporary files:
+*~
+*.swp
+*.pyc
+*.pyo
+
+# SQLite3 DB files:
+*.db
