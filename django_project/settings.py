@@ -1,6 +1,9 @@
 """Django settings and globals."""
 
 
+from path import path
+
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
