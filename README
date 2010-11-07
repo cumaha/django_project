@@ -1,0 +1,6 @@
+django_project
+==============
+
+This is my 'generic Django project' that I use for all of my Django sites. I
+was inspired to make this by https://github.com/fiee/generic_django_project (if
+you're reading this, thanks!).
