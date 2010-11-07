@@ -1,4 +1,4 @@
-# Django settings for django_project project.
+"""Django settings and globals."""
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
