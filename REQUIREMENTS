@@ -1,0 +1,6 @@
+Django
+Fabric
+South
+django-debug-toolbar
+gunicorn
+path.py
