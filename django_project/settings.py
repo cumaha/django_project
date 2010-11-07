@@ -49,6 +49,9 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+# Name of the directory which holds all media static media content.
+MEDIA_NAME = 'media'
+
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = PROJECT_ROOT / 'media'
