@@ -4,6 +4,9 @@
 from path import path
 
 
+PROJECT_ROOT = path(__file__).abspath()
+PROJECT_NAME = PROJECT_ROOT.dirname()
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
