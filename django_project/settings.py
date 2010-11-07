@@ -4,8 +4,7 @@
 from path import path
 
 
-PROJECT_ROOT = path(__file__).abspath()
-PROJECT_NAME = PROJECT_ROOT.dirname()
+PROJECT_ROOT = path(__file__).abspath().dirname()
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -52,7 +51,7 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = PROJECT_ROOT / 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
