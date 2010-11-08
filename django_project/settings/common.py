@@ -1,4 +1,4 @@
-"""Django settings and globals."""
+"""Common settings and globals."""
 
 
 from path import path
