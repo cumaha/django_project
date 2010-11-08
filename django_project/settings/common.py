@@ -9,10 +9,10 @@ PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
 
+## Site admins.
 ADMINS = (
-	# ('Your Name', 'your_email@domain.com'),
+	#('Your Name', 'your_email@domain.com'),
 )
-
 MANAGERS = ADMINS
 
 DATABASES = {
