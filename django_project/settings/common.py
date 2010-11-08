@@ -4,6 +4,7 @@
 from path import path
 
 
+## Important locations.
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
