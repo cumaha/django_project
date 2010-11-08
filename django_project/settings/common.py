@@ -8,9 +8,6 @@ PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
 ADMINS = (
 	# ('Your Name', 'your_email@domain.com'),
 )
