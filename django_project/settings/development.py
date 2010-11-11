@@ -5,6 +5,9 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+## Email.
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
 ## Site admins.
 ADMINS = (
 	('Randall Degges', 'rdegges@gmail.com'),
