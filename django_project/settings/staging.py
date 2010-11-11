@@ -1,6 +1,7 @@
 """Staging settings and globals."""
 
 
+## Debug.
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 

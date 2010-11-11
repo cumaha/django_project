@@ -1,6 +1,7 @@
 """Development settings and globals."""
 
 
+# Debug.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
