@@ -23,4 +23,4 @@ DATABASES = {
 }
 
 ## Cache.
-CACHE_BACKEND = 'file://%s' % SITE_ROOT / 'cache' / PROJECT_NAME
+CACHE_BACKEND = 'dummy://'
