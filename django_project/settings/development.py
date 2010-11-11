@@ -4,6 +4,9 @@
 ## Debug.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+INTERNAL_IPS = (
+	'127.0.0.1',
+)
 
 ## Email.
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
