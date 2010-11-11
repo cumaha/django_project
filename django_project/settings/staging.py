@@ -4,6 +4,7 @@
 ## Debug.
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+SEND_BROKEN_LINK_EMAILS = True
 
 ## Email.
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
