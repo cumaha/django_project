@@ -15,3 +15,8 @@ DATABASES = {
 		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
 	}
 }
+
+## Application settings.
+INSTALLED_APPS += (
+	'gunicorn',
+)
