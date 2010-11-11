@@ -33,4 +33,14 @@ DATABASES = {
 }
 
 ## Cache.
-CACHE_BACKEND = 'file://%s' % SITE_ROOT / 'cache' / PROJECT_NAME
+CACHE_BACKEND = 'file://%s' % (SITE_ROOT / 'cache' / PROJECT_NAME)
+
+## Key.
+try:
+	SECRET_KEY = open(SECRET_FILE).read().strip()
+except IOError:
+	try:
+		with open(SECRET_FILE, 'w') as f:
+			f.write(gen_secret_key(50))
+	except IOError:
+		raise Exception('Cannot open file %s for writing.' % SECRET_FILE)
