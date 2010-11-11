@@ -31,3 +31,6 @@ DATABASES = {
 
 ## Cache.
 CACHE_BACKEND = 'dummy://'
+
+## Key.
+SECRET_KEY = ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
