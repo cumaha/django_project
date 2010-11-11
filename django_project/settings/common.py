@@ -52,6 +52,9 @@ ADMIN_MEDIA_PREFIX = '/%s/admin/' % MEDIA_NAME
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^yzyn-*r2!(w=eufdn642o*j47n2t&_l3!%0zj2%)p7+7)ok^v'
 
+## Uploads.
+FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
+
 ## Cache.
 CACHE_MIDDLEWARE_SECONDS = 60 * 30
 CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_NAME
