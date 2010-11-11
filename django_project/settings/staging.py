@@ -5,6 +5,10 @@
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+## Email.
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = SITE_ROOT / 'log' / email
+
 ## Site admins.
 ADMINS = (
 	('Randall Degges', 'rdegges@gmail.com'),
