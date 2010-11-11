@@ -21,3 +21,6 @@ DATABASES = {
 		'PORT': '',
 	}
 }
+
+## Cache.
+CACHE_BACKEND = 'file://%s' % SITE_ROOT / 'cache' / PROJECT_NAME

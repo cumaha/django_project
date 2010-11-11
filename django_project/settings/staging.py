@@ -21,3 +21,6 @@ DATABASES = {
 		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
 	}
 }
+
+## Cache.
+CACHE_BACKEND = 'file://%s' % SITE_ROOT / 'cache' / PROJECT_NAME
