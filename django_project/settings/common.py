@@ -2,6 +2,7 @@
 
 
 from path import path
+from random import choice
 
 
 ## Important locations.
@@ -99,3 +100,8 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	'django.contrib.admindocs',
 )
+
+def gen_secret_key(l):
+	"""Generate a random secret key of length l."""
+
+	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(l)])
