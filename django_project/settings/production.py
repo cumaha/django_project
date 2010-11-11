@@ -5,6 +5,14 @@
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
+## Email.
+EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+#EMAIL_PORT = 25
+#EMAIL_USE_TLS = True
+EMAIL_SUBJECT_PREFIX = '[%s] ' % PROJECT_NAME
+
 ## Site admins.
 ADMINS = (
 	('Randall Degges', 'rdegges@gmail.com'),
