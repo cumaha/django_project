@@ -4,6 +4,12 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+## Site admins.
+ADMINS = (
+	('Randall Degges', 'rdegges@gmail.com'),
+)
+MANAGERS = ADMINS
+
 ## Database settings.
 DATABASES = {																	
 	'default': {
