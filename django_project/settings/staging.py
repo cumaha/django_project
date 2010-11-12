@@ -11,7 +11,7 @@ SEND_BROKEN_LINK_EMAILS = True
 
 ## Email.
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = SITE_ROOT / 'log' / email
+EMAIL_FILE_PATH = SITE_ROOT / 'log' / 'email'
 
 ## Site admins.
 ADMINS = (
