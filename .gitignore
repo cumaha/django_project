@@ -12,3 +12,6 @@ env
 
 # Log files:
 log
+
+# Secret key:
+SECRET
