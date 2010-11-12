@@ -1,6 +1,9 @@
 """Staging settings and globals."""
 
 
+from common import *
+
+
 ## Debug.
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG

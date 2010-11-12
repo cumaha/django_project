@@ -1,6 +1,9 @@
 """Development settings and globals."""
 
 
+from common import *
+
+
 ## Debug.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
