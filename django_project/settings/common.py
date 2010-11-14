@@ -1,6 +1,7 @@
 """Common settings and globals."""
 
 
+import sys
 from path import path
 from random import choice
 
@@ -10,6 +11,11 @@ PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
 SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
+
+## Setup the system path.
+sys.path.append(SITE_ROOT)
+sys.path.append(PROJECT_ROOT / 'apps')
+sys.path.append(PROJECT_ROOT / 'libs')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
