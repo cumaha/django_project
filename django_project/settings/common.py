@@ -1,32 +1,21 @@
-"""Django settings and globals."""
+"""Common settings and globals."""
 
 
+import sys
 from path import path
+from random import choice
 
 
-PROJECT_ROOT = path(__file__).abspath().dirname()
+## Important locations.
+PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
+SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
-
-ADMINS = (
-	# ('Your Name', 'your_email@domain.com'),
-)
-
-MANAGERS = ADMINS
-
-DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-		'NAME': '',						 # Or path to database file if using sqlite3.
-		'USER': '',						 # Not used with sqlite3.
-		'PASSWORD': '',					 # Not used with sqlite3.
-		'HOST': '',						 # Set to empty string for localhost. Not used with sqlite3.
-		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
-	}
-}
+## Setup the system path.
+sys.path.append(SITE_ROOT)
+sys.path.append(PROJECT_ROOT / 'apps')
+sys.path.append(PROJECT_ROOT / 'libs')
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -35,7 +24,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Los_Angeles'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -71,6 +60,14 @@ ADMIN_MEDIA_PREFIX = '/%s/admin/' % MEDIA_NAME
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^yzyn-*r2!(w=eufdn642o*j47n2t&_l3!%0zj2%)p7+7)ok^v'
 
+## Uploads.
+FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
+
+## Cache.
+CACHE_MIDDLEWARE_SECONDS = 60 * 30
+CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_NAME
+CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
+
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
 	'django.template.loaders.filesystem.Loader',
@@ -79,14 +76,19 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
+	'django.middleware.cache.UpdateCacheMiddleware',
+	'django.middleware.gzip.GZipMiddleware',
 	'django.middleware.common.CommonMiddleware',
 	'django.contrib.sessions.middleware.SessionMiddleware',
 	'django.middleware.csrf.CsrfViewMiddleware',
 	'django.contrib.auth.middleware.AuthenticationMiddleware',
 	'django.contrib.messages.middleware.MessageMiddleware',
+	'django.middleware.locale.LocaleMiddleware',
+	'django.middleware.http.ConditionalGetMiddleware',
+	'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
-ROOT_URLCONF = 'django_project.urls'
+ROOT_URLCONF = '%s.urls' % PROJECT_NAME
 
 TEMPLATE_DIRS = (
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -106,3 +108,8 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	'django.contrib.admindocs',
 )
+
+def gen_secret_key(l):
+	"""Generate a random secret key of length l."""
+
+	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(l)])

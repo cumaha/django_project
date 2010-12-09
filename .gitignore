@@ -9,3 +9,9 @@
 
 # Python virtual environments:
 env
+
+# Log files:
+log
+
+# Secret key:
+SECRET
