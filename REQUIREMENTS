@@ -1,6 +1,6 @@
 Django==1.3
 Fabric==1.0.0
-South
+South==0.7.3
 django-debug-toolbar
 gunicorn
 path.py
