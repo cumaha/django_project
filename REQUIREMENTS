@@ -3,3 +3,4 @@ Fabric==1.0.0
 South==0.7.3
 django-debug-toolbar==0.8.4
 gunicorn==0.12.1
+django-sentry==1.6.6.1
