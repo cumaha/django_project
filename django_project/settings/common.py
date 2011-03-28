@@ -48,7 +48,6 @@ MEDIA_URL = '/media/'
 
 
 ########## STATIC FILE CONFIGURATION
-
 # Absolute path to the directory static files should be collected to. Don't put
 # anything in this directory yourself; store your static files in apps' static/
 # subdirectories and in STATICFILES_DIRS.
@@ -73,6 +72,8 @@ STATICFILES_FINDERS = (
 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 	#'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+########## END STATIC FILE CONFIGURATION
+
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^yzyn-*r2!(w=eufdn642o*j47n2t&_l3!%0zj2%)p7+7)ok^v'
