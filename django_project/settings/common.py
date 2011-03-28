@@ -28,9 +28,12 @@ sys.path.append(PROJECT_ROOT / 'libs')
 ########## END PATH CONFIGURATION
 
 
-## Debugging (off by default). DO NOT ENABLE IN PRODUCTION!
+########## DEBUG CONFIGURATION
+# Disable debugging by default.
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+########## END DEBUG CONFIGURATION
+
 
 ## Admins and managers.
 ADMINS = (
