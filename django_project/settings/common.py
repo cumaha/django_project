@@ -47,7 +47,7 @@ MEDIA_ROOT = PROJECT_ROOT / 'media'
 MEDIA_URL = '/media/'
 
 
-## Static file settings.
+########## STATIC FILE CONFIGURATION
 
 # Absolute path to the directory static files should be collected to. Don't put
 # anything in this directory yourself; store your static files in apps' static/
