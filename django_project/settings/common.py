@@ -6,9 +6,18 @@ from random import choice
 
 
 ########## PATH CONFIGURATION
+# Absolute filesystem path to this Django project directory.
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
+
+# Project name.
 PROJECT_NAME = PROJECT_ROOT.name
+
+# Absolute filesystem path to the top-level project folder.
 SITE_ROOT = PROJECT_ROOT.dirname()
+
+# Absolute filesystem path to the secret file which holds this project's
+# SECRET_KEY. Will be auto-generated the first time this project is
+# interpreted.
 SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
 ########## END PATH CONFIGURATION
 
