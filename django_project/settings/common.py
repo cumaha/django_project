@@ -46,13 +46,28 @@ USE_L10N = True
 MEDIA_ROOT = PROJECT_ROOT / 'media'
 MEDIA_URL = '/media/'
 
+
 ## Static file settings.
+
+# Absolute path to the directory static files should be collected to. Don't put
+# anything in this directory yourself; store your static files in apps' static/
+# subdirectories and in STATICFILES_DIRS.
 STATIC_ROOT = PROJECT_ROOT / 'static'
+
+# URL prefix for static files.
 STATIC_URL = '/static/'
+
+# URL prefix for admin static files -- CSS, JavaScript and images. Make sure to
+# use a trailing slash.
 ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+# Additional locations of static files.
 STATICFILES_DIRS = (
 	PROJECT_ROOT / 'assets',
 )
+
+# List of finder classes that know how to find static files in various
+# locations.
 STATICFILES_FINDERS = (
 	'django.contrib.staticfiles.finders.FileSystemFinder',
 	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
