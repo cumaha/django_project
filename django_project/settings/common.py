@@ -46,8 +46,18 @@ USE_L10N = True
 MEDIA_ROOT = PROJECT_ROOT / 'media'
 MEDIA_URL = '/media/'
 
-ADMIN_MEDIA_PREFIX = '/%s/admin/' % 'media'
-
+## Static file settings.
+STATIC_ROOT = PROJECT_ROOT / 'static'
+STATIC_URL = '/static/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+STATICFILES_DIRS = (
+	PROJECT_ROOT / 'assets',
+)
+STATICFILES_FINDERS = (
+	'django.contrib.staticfiles.finders.FileSystemFinder',
+	'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+	#'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^yzyn-*r2!(w=eufdn642o*j47n2t&_l3!%0zj2%)p7+7)ok^v'
