@@ -16,6 +16,10 @@ sys.path.append(SITE_ROOT)
 sys.path.append(PROJECT_ROOT / 'apps')
 sys.path.append(PROJECT_ROOT / 'libs')
 
+## Debugging (off by default). DO NOT ENABLE IN PRODUCTION!
+DEBUG = False
+TEMPLATE_DEBUG = DEBUG
+
 ## Admins and managers.
 ADMINS = (
 	('Your Name', 'your_email@example.com'),
