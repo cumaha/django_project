@@ -29,8 +29,7 @@ MANAGERS = ADMINS
 ## Time zone (http://en.wikipedia.org/wiki/List_of_tz_zones_by_name).
 TIME_ZONE = 'America/Los_Angeles'
 
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
+## Language (http://www.i18nguy.com/unicode/language-identifiers.html).
 LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
