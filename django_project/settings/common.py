@@ -35,12 +35,11 @@ LANGUAGE_CODE = 'en-us'
 ## Unique site identifier.
 SITE_ID = 1
 
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
-USE_I18N = True
+## Internationalization. Set to True if you want to support non-English
+## languages.
+USE_I18N = False
 
-# If you set this to False, Django will not format dates, numbers and
-# calendars according to the current locale
+## Localize dates, numbers, and calendars.
 USE_L10N = True
 
 # Name of the directory which holds all media static media content.
