@@ -32,6 +32,7 @@ TIME_ZONE = 'America/Los_Angeles'
 ## Language (http://www.i18nguy.com/unicode/language-identifiers.html).
 LANGUAGE_CODE = 'en-us'
 
+## Unique site identifier.
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
