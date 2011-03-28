@@ -35,11 +35,16 @@ TEMPLATE_DEBUG = DEBUG
 ########## END DEBUG CONFIGURATION
 
 
-## Admins and managers.
+########## CONTACT CONFIGURATION
+# Admin and managers for this project. These people receive private site
+# alerts.
 ADMINS = (
 	('Your Name', 'your_email@example.com'),
 )
+
 MANAGERS = ADMINS
+########## END CONTACT CONFIGURATION
+
 
 ## Time zone (http://en.wikipedia.org/wiki/List_of_tz_zones_by_name).
 TIME_ZONE = 'America/Los_Angeles'
