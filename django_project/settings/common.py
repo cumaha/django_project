@@ -42,22 +42,12 @@ USE_I18N = False
 ## Localize dates, numbers, and calendars.
 USE_L10N = True
 
-# Name of the directory which holds all media static media content.
-MEDIA_NAME = 'media'
+## User-uploaded media settings.
+MEDIA_ROOT = PROJECT_ROOT / 'media'
+MEDIA_URL = '/media/'
 
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = PROJECT_ROOT / MEDIA_NAME
+ADMIN_MEDIA_PREFIX = '/%s/admin/' % 'media'
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/%s/' % MEDIA_NAME
-
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/%s/admin/' % MEDIA_NAME
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '^yzyn-*r2!(w=eufdn642o*j47n2t&_l3!%0zj2%)p7+7)ok^v'
