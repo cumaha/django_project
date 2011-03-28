@@ -19,13 +19,14 @@ SITE_ROOT = PROJECT_ROOT.dirname()
 # SECRET_KEY. Will be auto-generated the first time this project is
 # interpreted.
 SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
-########## END PATH CONFIGURATION
 
-
-## Setup the system path.
+# Add all necessary filesystem paths to our system path so that we can use
+# python import statements.
 sys.path.append(SITE_ROOT)
 sys.path.append(PROJECT_ROOT / 'apps')
 sys.path.append(PROJECT_ROOT / 'libs')
+########## END PATH CONFIGURATION
+
 
 ## Debugging (off by default). DO NOT ENABLE IN PRODUCTION!
 DEBUG = False
