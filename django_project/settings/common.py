@@ -5,11 +5,13 @@ import sys
 from random import choice
 
 
-## Important locations.
+########## PATH CONFIGURATION
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
 PROJECT_NAME = PROJECT_ROOT.name
 SITE_ROOT = PROJECT_ROOT.dirname()
 SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
+########## END PATH CONFIGURATION
+
 
 ## Setup the system path.
 sys.path.append(SITE_ROOT)
