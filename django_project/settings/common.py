@@ -42,9 +42,15 @@ USE_I18N = False
 ## Localize dates, numbers, and calendars.
 USE_L10N = True
 
-## User-uploaded media settings.
+
+########## MEDIA CONFIGURATION
+# Absolute filesystem path to the directory that will hold user-uploaded files.
 MEDIA_ROOT = PROJECT_ROOT / 'media'
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
 MEDIA_URL = '/media/'
+########## END MEDIA CONFIGURATION
 
 
 ########## STATIC FILE CONFIGURATION
