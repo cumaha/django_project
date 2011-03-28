@@ -35,7 +35,7 @@ TEMPLATE_DEBUG = DEBUG
 ########## END DEBUG CONFIGURATION
 
 
-########## CONTACT CONFIGURATION
+########## MANAGER CONFIGURATION
 # Admin and managers for this project. These people receive private site
 # alerts.
 ADMINS = (
@@ -43,7 +43,7 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
-########## END CONTACT CONFIGURATION
+########## END MANAGER CONFIGURATION
 
 
 ## Time zone (http://en.wikipedia.org/wiki/List_of_tz_zones_by_name).
