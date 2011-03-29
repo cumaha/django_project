@@ -3,12 +3,12 @@
 
 import sys
 from random import choice
-from os.path import abspath
+from os.path import abspath, dirname
 
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to this Django project directory.
-DJANGO_ROOT = abspath(__file__)
+DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
 # Project name.
 PROJECT_NAME = DJANGO_ROOT.name
