@@ -3,7 +3,7 @@
 
 import sys
 from random import choice
-from os.path import abspath, dirname
+from os.path import abspath, basename, dirname
 
 
 ########## PATH CONFIGURATION
@@ -11,7 +11,7 @@ from os.path import abspath, dirname
 DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
 # Project name.
-PROJECT_NAME = DJANGO_ROOT.name
+PROJECT_NAME = basename(DJANGO_ROOT)
 
 # Absolute filesystem path to the top-level project folder.
 SITE_ROOT = DJANGO_ROOT.dirname()
