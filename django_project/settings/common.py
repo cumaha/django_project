@@ -14,7 +14,7 @@ DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 PROJECT_NAME = basename(DJANGO_ROOT)
 
 # Absolute filesystem path to the top-level project folder.
-SITE_ROOT = DJANGO_ROOT.dirname()
+SITE_ROOT = dirname(DJANGO_ROOT)
 
 # Absolute filesystem path to the secret file which holds this project's
 # SECRET_KEY. Will be auto-generated the first time this project is
