@@ -47,26 +47,37 @@ MANAGERS = ADMINS
 ########## END MANAGER CONFIGURATION
 
 
-## Time zone (http://en.wikipedia.org/wiki/List_of_tz_zones_by_name).
+########## GENERAL CONFIGURATION
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name although not all
+# choices may be available on all operating systems.  On Unix systems, a value
+# of None will cause Django to use the same timezone as the operating system.
+# If running in a Windows environment this must be set to the same as your
+# system time zone.
 TIME_ZONE = 'America/Los_Angeles'
 
-## Language (http://www.i18nguy.com/unicode/language-identifiers.html).
+# Language code for this installation. All choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html.
 LANGUAGE_CODE = 'en-us'
 
-## Unique site identifier.
+# The ID, as an integer, of the current site in the django_site database table.
+# This is used so that application data can hook into specific site(s) and a
+# single database can manage content for multiple sites.
 SITE_ID = 1
 
-## Internationalization. Set to True if you want to support non-English
-## languages.
+# If you set this to False, Django will make some optimizations so as not
+# to load the internationalization machinery.
 USE_I18N = False
 
-## Localize dates, numbers, and calendars.
+# If you set this to False, Django will not format dates, numbers and
+# calendars according to the current locale
 USE_L10N = True
+########## END GENERAL CONFIGURATION
 
 
 ########## MEDIA CONFIGURATION
 # Absolute filesystem path to the directory that will hold user-uploaded files.
-MEDIA_ROOT = PROJECT_ROOT / 'media'
+MEDIA_ROOT = DJANGO_ROOT / 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
