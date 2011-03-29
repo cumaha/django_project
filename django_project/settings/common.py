@@ -8,13 +8,13 @@ from os.path import abspath
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to this Django project directory.
-PROJECT_ROOT = abspath(__file__)
+DJANGO_ROOT = abspath(__file__)
 
 # Project name.
-PROJECT_NAME = PROJECT_ROOT.name
+PROJECT_NAME = DJANGO_ROOT.name
 
 # Absolute filesystem path to the top-level project folder.
-SITE_ROOT = PROJECT_ROOT.dirname()
+SITE_ROOT = DJANGO_ROOT.dirname()
 
 # Absolute filesystem path to the secret file which holds this project's
 # SECRET_KEY. Will be auto-generated the first time this project is
@@ -24,8 +24,8 @@ SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
 # Add all necessary filesystem paths to our system path so that we can use
 # python import statements.
 sys.path.append(SITE_ROOT)
-sys.path.append(PROJECT_ROOT / 'apps')
-sys.path.append(PROJECT_ROOT / 'libs')
+sys.path.append(DJANGO_ROOT / 'apps')
+sys.path.append(DJANGO_ROOT / 'libs')
 ########## END PATH CONFIGURATION
 
 
@@ -78,7 +78,7 @@ MEDIA_URL = '/media/'
 # Absolute path to the directory static files should be collected to. Don't put
 # anything in this directory yourself; store your static files in apps' static/
 # subdirectories and in STATICFILES_DIRS.
-STATIC_ROOT = PROJECT_ROOT / 'static'
+STATIC_ROOT = DJANGO_ROOT / 'static'
 
 # URL prefix for static files.
 STATIC_URL = '/static/'
@@ -89,7 +89,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files.
 STATICFILES_DIRS = (
-	PROJECT_ROOT / 'assets',
+	DJANGO_ROOT / 'assets',
 )
 
 # List of finder classes that know how to find static files in various
@@ -139,7 +139,7 @@ TEMPLATE_DIRS = (
 	# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
 	# Always use forward slashes, even on Windows.
 	# Don't forget to use absolute paths, not relative paths.
-	PROJECT_ROOT / 'templates',
+	DJANGO_ROOT / 'templates',
 )
 
 INSTALLED_APPS = (
