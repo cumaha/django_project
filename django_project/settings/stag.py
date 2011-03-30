@@ -15,12 +15,6 @@ EMAIL_USE_TLS = False
 ########## END EMAIL CONFIGURATION
 
 
-## Site admins.
-ADMINS = (
-	('Randall Degges', 'rdegges@gmail.com'),
-)
-MANAGERS = ADMINS
-
 ## Database settings.
 DATABASES = {
 	'default': {
