@@ -3,7 +3,7 @@
 
 import sys
 from random import choice
-from os.path import abspath, basename, dirname
+from os.path import abspath, basename, dirname, join, normpath
 
 
 ########## PATH CONFIGURATION
@@ -17,9 +17,8 @@ PROJECT_NAME = basename(DJANGO_ROOT)
 SITE_ROOT = dirname(DJANGO_ROOT)
 
 # Absolute filesystem path to the secret file which holds this project's
-# SECRET_KEY. Will be auto-generated the first time this project is
-# interpreted.
-SECRET_FILE = SITE_ROOT / 'deploy' / 'SECRET'
+# SECRET_KEY. Will be auto-generated the first time this file is interpreted.
+SECRET_FILE = normpath(join(SITE_ROOT, 'deploy', 'SECRET'))
 
 # Add all necessary filesystem paths to our system path so that we can use
 # python import statements.
