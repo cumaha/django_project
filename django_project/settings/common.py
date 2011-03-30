@@ -152,7 +152,10 @@ INSTALLED_APPS = (
 ########## END APP CONFIGURATION
 
 
+########## URL CONFIGURATION
 ROOT_URLCONF = '%s.urls' % PROJECT_NAME
+########## END URL CONFIGURATION
+
 
 def gen_secret_key(l):
 	"""Generate a random secret key of length l."""
