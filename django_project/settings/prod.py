@@ -30,6 +30,31 @@ DATABASES = {
 ########## END DATABASE CONFIGURATION
 
 
+########## CACHE CONFIGURATION
+CACHES = {
+	# Memcached cache. See
+	# http://docs.djangoproject.com/en/1.3/topics/cache/#memcached for more
+	# information.
+	#'default': {
+	#	'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+	#	'LOCATION': [
+	#		'127.0.0.1:11211',
+	#		'192.168.0.1:11211',
+	#		'192.168.0.2:11211',
+	#	],
+	#}
+
+	# Local memory cache. See
+	# http://docs.djangoproject.com/en/1.3/topics/cache/#local-memory-caching
+	# for more information.
+	'default': {
+		'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+		'LOCATION': SITE_NAME,
+	}
+}
+########## END CACHE CONFIGURATION
+
+
 ########## LOGGING CONFIGURATION
 # A sample logging configuration. The only tangible logging performed by this
 # configuration is to send an email to the site admins on every HTTP 500 error.

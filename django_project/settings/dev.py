@@ -30,6 +30,15 @@ DATABASES = {
 ########## END DATABASE CONFIGURATION
 
 
+########## CACHE CONFIGURATION
+CACHES = {
+	'default': {
+		'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+	}
+}
+########## END CACHE CONFIGURATION
+
+
 ########## DJANGO-DEBUG-TOOLBAR CONFIGURATION
 MIDDLEWARE_CLASSES += (
 	'debug_toolbar.middleware.DebugToolbarMiddleware',
