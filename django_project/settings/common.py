@@ -125,6 +125,17 @@ TEMPLATE_DIRS = (
 ########## END TEMPLATE CONFIGURATION
 
 
+########## MIDDLEWARE CONFIGURATION
+MIDDLEWARE_CLASSES = (
+	'django.middleware.common.CommonMiddleware',
+	'django.contrib.sessions.middleware.SessionMiddleware',
+	'django.middleware.csrf.CsrfViewMiddleware',
+	'django.contrib.auth.middleware.AuthenticationMiddleware',
+	'django.contrib.messages.middleware.MessageMiddleware',
+)
+########## END MIDDLEWARE CONFIGURATION
+
+
 ## Uploads.
 FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
 
@@ -132,19 +143,6 @@ FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
 CACHE_MIDDLEWARE_SECONDS = 60 * 30
 CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_NAME
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
-
-MIDDLEWARE_CLASSES = (
-	'django.middleware.cache.UpdateCacheMiddleware',
-	'django.middleware.gzip.GZipMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.locale.LocaleMiddleware',
-	'django.middleware.http.ConditionalGetMiddleware',
-	'django.middleware.cache.FetchFromCacheMiddleware',
-)
 
 ROOT_URLCONF = '%s.urls' % PROJECT_NAME
 
