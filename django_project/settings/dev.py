@@ -8,7 +8,7 @@ from os.path import join, normpath
 ########## DEBUG CONFIGURATION
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-########## END DEBUG
+########## END DEBUG CONFIGURATION
 
 
 ########## EMAIL CONFIGURATION
