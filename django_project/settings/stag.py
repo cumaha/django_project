@@ -4,11 +4,16 @@
 from common import *
 
 
-SEND_BROKEN_LINK_EMAILS = True
+########## EMAIL CONFIGURATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = ''
+EMAIL_PORT = 25
+EMAIL_SUBJECT_PREFIX = '[%s->STAGING] ' % SITE_NAME
+EMAIL_USE_TLS = False
+########## END EMAIL CONFIGURATION
 
-## Email.
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = SITE_ROOT / 'log' / 'email'
 
 ## Site admins.
 ADMINS = (
