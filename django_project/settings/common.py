@@ -9,8 +9,8 @@ from os.path import abspath, basename, dirname, join, normpath
 # Absolute filesystem path to this Django project directory.
 DJANGO_ROOT = dirname(dirname(abspath(__file__)))
 
-# Project name.
-PROJECT_NAME = basename(DJANGO_ROOT)
+# Site name.
+SITE_NAME = basename(DJANGO_ROOT)
 
 # Absolute filesystem path to the top-level project folder.
 SITE_ROOT = dirname(DJANGO_ROOT)
@@ -152,5 +152,5 @@ INSTALLED_APPS = (
 
 
 ########## URL CONFIGURATION
-ROOT_URLCONF = '%s.urls' % PROJECT_NAME
+ROOT_URLCONF = '%s.urls' % SITE_NAME
 ########## END URL CONFIGURATION
