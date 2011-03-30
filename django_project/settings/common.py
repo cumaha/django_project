@@ -149,6 +149,12 @@ INSTALLED_APPS = (
 	# Admin panel and documentation.
 	'django.contrib.admin',
 	'django.contrib.admindocs',
+
+	# django-sentry log viewer.
+	'indexer',
+	'paging',
+	'sentry',
+	'sentry.client',
 )
 ########## END APP CONFIGURATION
 
