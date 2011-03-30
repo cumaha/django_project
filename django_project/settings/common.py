@@ -155,9 +155,3 @@ INSTALLED_APPS = (
 ########## URL CONFIGURATION
 ROOT_URLCONF = '%s.urls' % PROJECT_NAME
 ########## END URL CONFIGURATION
-
-
-def gen_secret_key(l):
-	"""Generate a random secret key of length l."""
-
-	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(l)])
