@@ -4,6 +4,8 @@
 import sys
 from os.path import abspath, basename, dirname, join, normpath
 
+from helpers import gen_secret_key
+
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to this Django project directory.
@@ -154,3 +156,18 @@ INSTALLED_APPS = (
 ########## URL CONFIGURATION
 ROOT_URLCONF = '%s.urls' % SITE_NAME
 ########## END URL CONFIGURATION
+
+
+########## KEY CONFIGURATION
+# Try to load the SECRET_KEY from our SECRET_FILE. If that fails, then generate
+# a random SECRET_KEY and save it into our SECRET_FILE for future loading. If
+# everything fails, then just raise an exception.
+try:
+	SECRET_KEY = open(SECRET_FILE).read().strip()
+except IOError:
+	try:
+		with open(SECRET_FILE, 'w') as f:
+			f.write(gen_secret_key(50))
+	except IOError:
+		raise Exception('Cannot open file `%s` for writing.' % SECRET_FILE)
+########## END KEY CONFIGURATION
