@@ -17,7 +17,6 @@ SERVER_EMAIL = 'root@localhost'
 
 
 ########## DATABASE CONFIGURATION
-## Database settings.
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
