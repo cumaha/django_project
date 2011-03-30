@@ -28,7 +28,3 @@ DATABASES = {
 	}
 }
 ########## END DATABASE CONFIGURATION
-
-
-## Key.
-SECRET_KEY = gen_secret_key(50)
