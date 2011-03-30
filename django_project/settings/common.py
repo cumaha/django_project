@@ -2,7 +2,6 @@
 
 
 import sys
-from random import choice
 from os.path import abspath, basename, dirname, join, normpath
 
 
