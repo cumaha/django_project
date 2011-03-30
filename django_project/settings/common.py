@@ -110,6 +110,21 @@ STATICFILES_FINDERS = (
 ########## END STATIC FILE CONFIGURATION
 
 
+########## TEMPLATE CONFIGURATION
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+	'django.template.loaders.filesystem.Loader',
+	'django.template.loaders.app_directories.Loader',
+	#'django.template.loaders.eggs.Loader',
+)
+
+# Directories to search when loading templates.
+TEMPLATE_DIRS = (
+	normpath(join(DJANGO_ROOT, 'templates')),
+)
+########## END TEMPLATE CONFIGURATION
+
+
 ## Uploads.
 FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
 
@@ -117,13 +132,6 @@ FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
 CACHE_MIDDLEWARE_SECONDS = 60 * 30
 CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_NAME
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
-
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-	'django.template.loaders.filesystem.Loader',
-	'django.template.loaders.app_directories.Loader',
-#	  'django.template.loaders.eggs.Loader',
-)
 
 MIDDLEWARE_CLASSES = (
 	'django.middleware.cache.UpdateCacheMiddleware',
@@ -139,13 +147,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = '%s.urls' % PROJECT_NAME
-
-TEMPLATE_DIRS = (
-	# Put strings here, like "/home/html/django_templates" or
-	# "C:/www/django/templates". Always use forward slashes, even on Windows.
-	# Don't forget to use absolute paths, not relative paths.
-	DJANGO_ROOT / 'templates',
-)
 
 INSTALLED_APPS = (
 	'django.contrib.auth',
