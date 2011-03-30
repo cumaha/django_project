@@ -136,6 +136,22 @@ MIDDLEWARE_CLASSES = (
 ########## END MIDDLEWARE CONFIGURATION
 
 
+########## APP CONFIGURATION
+INSTALLED_APPS = (
+	'django.contrib.auth',
+	'django.contrib.contenttypes',
+	'django.contrib.sessions',
+	'django.contrib.sites',
+	'django.contrib.messages',
+	'django.contrib.staticfiles',
+
+	# Admin panel and documentation.
+	'django.contrib.admin',
+	'django.contrib.admindocs',
+)
+########## END APP CONFIGURATION
+
+
 ## Uploads.
 FILE_UPLOAD_TEMP_DIR = SITE_ROOT / 'tmp'
 
@@ -145,19 +161,6 @@ CACHE_MIDDLEWARE_KEY_PREFIX = PROJECT_NAME
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
 
 ROOT_URLCONF = '%s.urls' % PROJECT_NAME
-
-INSTALLED_APPS = (
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.sites',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-
-	## Admin panel and documentation.
-	'django.contrib.admin',
-	'django.contrib.admindocs',
-)
 
 def gen_secret_key(l):
 	"""Generate a random secret key of length l."""
