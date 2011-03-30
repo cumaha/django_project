@@ -6,3 +6,4 @@ django-debug-toolbar==0.8.4
 gunicorn==0.12.1
 django-sentry==1.6.6.1
 python-memcached==1.47
+django-celery==2.2.4
