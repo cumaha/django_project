@@ -150,6 +150,9 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	'django.contrib.admindocs',
 
+	# South migration tool.
+	'south',
+
 	# django-sentry log viewer.
 	'indexer',
 	'paging',
