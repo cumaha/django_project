@@ -16,6 +16,7 @@ SERVER_EMAIL = 'root@localhost'
 ########## END EMAIL CONFIGURATION
 
 
+########## DATABASE CONFIGURATION
 ## Database settings.
 DATABASES = {
 	'default': {
@@ -27,6 +28,8 @@ DATABASES = {
 		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
 	}
 }
+########## END DATABASE CONFIGURATION
+
 
 ## Cache.
 CACHE_BACKEND = 'file://%s' % (SITE_ROOT / 'cache' / PROJECT_NAME)
