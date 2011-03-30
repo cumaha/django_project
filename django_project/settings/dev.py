@@ -2,32 +2,33 @@
 
 
 from common import *
+from os.path import join, normpath
 
 
-## Debug.
+########## DEBUG CONFIGURATION
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-INTERNAL_IPS = (
-	'127.0.0.1',
-)
+########## END DEBUG
 
-## Email.
+
+########## EMAIL CONFIGURATION
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+########## END EMAIL CONFIGURATION
 
-## Database settings.
+
+########## DATABASE CONFIGURATION
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': SITE_ROOT / 'db' / PROJECT_NAME+'.db',
+		'NAME': normpath(join(SITE_ROOT, 'db', 'default.db')),
 		'USER': '',
 		'PASSWORD': '',
 		'HOST': '',
 		'PORT': '',
 	}
 }
+########## END DATABASE CONFIGURATION
 
-## Cache.
-CACHE_BACKEND = 'dummy://'
 
 ## Key.
 SECRET_KEY = gen_secret_key(50)
