@@ -153,6 +153,9 @@ INSTALLED_APPS = (
 	# South migration tool.
 	'south',
 
+	# Celery task queue.
+	'djcelery',
+
 	# django-sentry log viewer.
 	'indexer',
 	'paging',
