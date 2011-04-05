@@ -165,6 +165,12 @@ INSTALLED_APPS = (
 ########## END APP CONFIGURATION
 
 
+########## CELERY CONFIGURATION
+import djcelery
+djcelery.setup_loader()
+########## END CELERY CONFIGURATION
+
+
 ########## URL CONFIGURATION
 ROOT_URLCONF = '%s.urls' % SITE_NAME
 ########## END URL CONFIGURATION
