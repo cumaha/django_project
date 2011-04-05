@@ -55,6 +55,23 @@ CACHES = {
 ########## END CACHE CONFIGURATION
 
 
+########## CELERY CONFIGURATION
+# RabbitMQ broker. See
+# http://docs.celeryproject.org/en/v2.2.5/getting-started/broker-installation.html#installing-rabbitmq
+#BROKER_HOST = 'localhost'
+#BROKER_PORT = 5672
+#BROKER_USER = 'guest'
+#BROKER_PASSWORD = 'guest'
+#BROKER_VHOST = '/'
+
+INSTALLED_APPS += (
+	'djkombu',
+)
+
+BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
+########## END CELERY CONFIGURATION
+
+
 ########## LOGGING CONFIGURATION
 # A sample logging configuration. The only tangible logging performed by this
 # configuration is to send an email to the site admins on every HTTP 500 error.
