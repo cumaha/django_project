@@ -1,16 +1,17 @@
-from django.conf.urls.defaults import *
+from django.contrib import admin
+from django.conf.urls.defaults import include, patterns, url
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
 
+admin.autodiscover()
 urlpatterns = patterns('',
-    # Example:
-    # (r'^django_project/', include('django_project.foo.urls')),
+	# Examples:
+	# url(r'^$', 'django_project.views.home', name='home'),
+	# url(r'^django_project/', include('django_project.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
+	# Admin panel and documentation.
+	url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+	url(r'^admin/', include(admin.site.urls)),
 
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
+	# django-sentry log viewer.
+	url(r'^sentry/', include('sentry.urls')),
 )
