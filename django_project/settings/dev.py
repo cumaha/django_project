@@ -46,7 +46,6 @@ MIDDLEWARE_CLASSES += (
 
 INSTALLED_APPS += (
 	'debug_toolbar',
-	'djkombu',
 )
 
 # IPs allowed to see django-debug-toolbar output.
@@ -90,5 +89,9 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 ########## CELERY CONFIGURATION
+INSTALLED_APPS += (
+	'djkombu',
+)
+
 BROKER_BACKEND = 'djkombu.transport.DatabaseTransport'
 ########## END CELERY CONFIGURATION
